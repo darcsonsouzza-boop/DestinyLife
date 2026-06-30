@@ -1,0 +1,3 @@
+data.js apenas fornece dados.
+game.js contém toda a lógica da Engine.
+app.js apenas conversa com a interface (HTML).
