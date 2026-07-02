@@ -1,3 +1,8 @@
+//função que poderá ser reutilizada caso haja uma mudança
+function mostrarResultado(resultado) {
+
+}
+
 //Interface com usuários,dados de input//
 const botao = document.getElementById("btnDestino");
 
@@ -46,6 +51,8 @@ eliminarAteSobrarQuatro(
 );
 //vericação dos 4 elementos
 const resultado = obterResultadoFinal(roda);
+
+mostrarResultado(resultado);
 
 console.log("Resultado Final:");
 console.log(resultado);
