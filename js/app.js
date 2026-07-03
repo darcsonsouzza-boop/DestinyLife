@@ -1,6 +1,18 @@
 //função que poderá ser reutilizada caso haja uma mudança
 function mostrarResultado(resultado) {
 
+    resultado.forEach(item => {
+
+        if (item.tipo === "pretendente") {
+
+           
+        document.getElementById("resultadoPretendente").textContent =
+    "Você casará com: " + item.valor;
+        }
+
+    });
+
+ 
 }
 
 //Interface com usuários,dados de input//
@@ -54,8 +66,6 @@ const resultado = obterResultadoFinal(roda);
 
 mostrarResultado(resultado);
 
-console.log("Resultado Final:");
-console.log(resultado);
 console.log("Ativos:");
 console.log(obterItensAtivos(roda));
 
