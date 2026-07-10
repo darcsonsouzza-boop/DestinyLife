@@ -147,14 +147,7 @@ function eliminarAteSobrarQuatro(roda, idade) {
 
     indiceAtual = indice + 1;
 
-      console.log(
-  "Eliminado:",
-  item.tipo,
-  "-",
-  item.valor,
-  "| Próximo índice:",
-  indiceAtual
-);
+  
 }
 
 }
@@ -163,6 +156,7 @@ function obterResultadoFinal(roda) {
 
   const ativos = obterItensAtivos(roda);
 
-  return ativos;
+  return ativos
 
+ 
 }
