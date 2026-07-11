@@ -8,35 +8,14 @@
   return;
 
 };
-//validar nomes de pretendentes
+//Ponte para delegar a função validarListas com a condição if
 function validarPretendentes(pretendentes) {
-
-  for (const nome of pretendentes) {
-
-    if (nome.trim() === "") {
-      return false;
-    }
-    
-
-  }
-
- return true;
- 
+    return validarLista(pretendentes);
 }
 
-//validar strings cidades
 function validarCidades(cidades) {
-
-  for (const nome of cidades) {
-
-    if(nome.trim() === "") {
-      return false;
-    }
- 
+    return validarLista(cidades);
 }
-   return true;
-};
-console.log(validarCidades(["manaus", "Lao", "Lao"]));
 
 //função que poderá ser reutilizada caso haja uma mudança
 function mostrarResultado(resultado) {
@@ -70,15 +49,12 @@ function mostrarResultado(resultado) {
         " E serão " + item.valor;
 
 }
-
           
     });
     
-
- 
 }
 
-//Interface com usuários,dados de input//
+//Botão destino//
 const botao = document.getElementById("btnDestino");
 
 botao.addEventListener("click", () => {
@@ -96,14 +72,12 @@ const idade =
 
 }
 
-
 const pretendente1 = document.getElementById("pretendente1").value;
 
 const pretendente2 = document.getElementById("pretendente2").value;
 
 const pretendente3 = document.getElementById("pretendente3").value;
 
-//cidades destinos//
 const cidade1 = document.getElementById("cidade1").value;
 
 const cidade2 = document.getElementById("cidade2").value;
@@ -122,8 +96,21 @@ const cidades = [
   cidade2,
   cidade3
 ];
-//condição, pretendete e cidades validar antes da engine acontecer
-if (!validarPretendentes(pretendentes) ) {
+
+//ponte 2 validação por lista de objetos.
+function validarLista(lista){
+
+  for (const item of lista) {
+    if (item.trim() === "") {
+
+      return false
+    }
+
+  } 
+    return true;
+};
+//condição, pretendete e cidades lincada 
+if (!validarLista(pretendentes) ) {
 
 
     alert("Todos os campos de pretendentes devem ser preenchidos.");
@@ -132,12 +119,13 @@ if (!validarPretendentes(pretendentes) ) {
 
 }
 
-if(!validarCidades(cidades)){
+if(!validarLista(cidades)){
 
     alert("Preencher todos os campos Cidades!" )
 
     return
 }
+
 //envia para game.js trabalhar os dados e retornar resultado!
  const roda = criarRoda(
   pretendentes,
