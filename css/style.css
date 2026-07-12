@@ -8,8 +8,13 @@ body {
   max-width: 600px;
   margin: 0 auto;
   padding: 20px;
-  background-color: rgb(235, 108, 97);
+  background: linear-gradient(to right, #ff7e5f, #feb47b);
+
+
 }
+
+
+
 
 h1 {
   text-align: center;

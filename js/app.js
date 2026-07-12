@@ -1,4 +1,7 @@
  //validações de imputs
+ const mensagemErro = document.getElementById("mensagemErro");
+
+ 
  function validarIdade(idade) {
 
   if (idade >= 18 && idade <= 80){
@@ -58,15 +61,16 @@ function mostrarResultado(resultado) {
 const botao = document.getElementById("btnDestino");
 
 botao.addEventListener("click", () => {
-
-
+//campos completos depois do erro recerberão strig vazia 
+mensagemErro.textContent = "";
 
 //validação da idade 18 á 80 anos
 const idade =
   Number(document.getElementById("idade").value);
   if (!validarIdade(idade)) {
 
-  alert("Informe uma idade entre 18 e 80 anos")
+   mensagemErro.textContent = " digite uma idade entre 18 á 80 anos.";
+
 
   return;
 
@@ -109,11 +113,10 @@ function validarLista(lista){
   } 
     return true;
 };
-//condição, pretendete e cidades lincada 
+
 if (!validarLista(pretendentes) ) {
 
-
-    alert("Todos os campos de pretendentes devem ser preenchidos.");
+  mensagemErro.textContent = "Preencha todos os pretendentes.";
 
     return ;
 
@@ -121,7 +124,7 @@ if (!validarLista(pretendentes) ) {
 
 if(!validarLista(cidades)){
 
-    alert("Preencher todos os campos Cidades!" )
+    mensagemErro.textContent = "Preencha todas as cidades.";
 
     return
 }
