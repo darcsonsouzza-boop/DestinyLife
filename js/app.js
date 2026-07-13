@@ -1,7 +1,4 @@
  //validações de imputs
- const mensagemErro = document.getElementById("mensagemErro");
-
- 
  function validarIdade(idade) {
 
   if (idade >= 18 && idade <= 80){
@@ -56,20 +53,26 @@ function mostrarResultado(resultado) {
     });
     
 }
+//recepcionista de erro
+ function mostrarErro(mensagem) {
+  const mensagemErro = document.getElementById("mensagemErro");
+  mensagemErro.textContent = mensagem;
+
+}
 
 //Botão destino//
 const botao = document.getElementById("btnDestino");
 
 botao.addEventListener("click", () => {
-//campos completos depois do erro recerberão strig vazia 
-mensagemErro.textContent = "";
+//campos completos depois do erro recerberão string vazia 
+mostrarErro("");
 
 //validação da idade 18 á 80 anos
 const idade =
   Number(document.getElementById("idade").value);
   if (!validarIdade(idade)) {
 
-   mensagemErro.textContent = " digite uma idade entre 18 á 80 anos.";
+   mostrarErro(" digite uma idade entre 18 á 80 anos.");
 
 
   return;
@@ -116,7 +119,7 @@ function validarLista(lista){
 
 if (!validarLista(pretendentes) ) {
 
-  mensagemErro.textContent = "Preencha todos os pretendentes.";
+  mostrarErro("Preencha todos os pretendentes.");
 
     return ;
 
@@ -124,7 +127,7 @@ if (!validarLista(pretendentes) ) {
 
 if(!validarLista(cidades)){
 
-    mensagemErro.textContent = "Preencha todas as cidades.";
+    mostrarErro("Preencha todas as cidades.");
 
     return
 }
@@ -139,5 +142,7 @@ eliminarAteSobrarQuatro(
   roda,
   Number(idade)
 );
+
+
 
 });
