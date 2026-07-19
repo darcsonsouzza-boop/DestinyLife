@@ -1,7 +1,11 @@
+
+const mensagemErro = document.getElementById("mensagemErro");
+const narrativa = document.getElementById("narrativa");
  //validações de imputs
  function validarIdade(idade) {
 
   if (idade >= 18 && idade <= 80){
+    
     return alert;
   }
 
@@ -55,7 +59,6 @@ function mostrarResultado(resultado) {
 }
 //recepcionista de erro
  function mostrarErro(mensagem) {
-  const mensagemErro = document.getElementById("mensagemErro");
   mensagemErro.textContent = mensagem;
 
 }
@@ -66,6 +69,43 @@ const botao = document.getElementById("btnDestino");
 botao.addEventListener("click", () => {
 //campos completos depois do erro recerberão string vazia 
 mostrarErro("");
+
+//narativa de texto espectativa 
+function mostrarNarrativa(texto) {
+   narrativa.textContent = texto;
+}
+
+//Tempo controlado da narrativa
+function contarHistoria(resultado) {
+  let amor;
+  let cidade; 
+  let filhos;
+  let status;
+  for (const item of resultado) {
+   if (item.tipo === "pretendente"){
+    amor = item.valor;
+     
+   }
+   if (item.tipo === "cidade") {
+        cidade = item.valor;
+    }
+
+    if (item.tipo === "filhos") {
+        filhos = item.valor;
+    }
+
+    if (item.tipo === "status") {
+        status = item.valor;
+    }
+        
+  }
+  setTimeout(() =>{
+    mostrarNarrativa("TESTE");
+  }, 2000);
+
+ 
+};
+
 
 //validação da idade 18 á 80 anos
 const idade =
@@ -78,6 +118,7 @@ const idade =
   return;
 
 }
+
 
 const pretendente1 = document.getElementById("pretendente1").value;
 
@@ -132,6 +173,7 @@ if(!validarLista(cidades)){
     return
 }
 
+
 //envia para game.js trabalhar os dados e retornar resultado!
  const roda = criarRoda(
   pretendentes,
@@ -142,7 +184,10 @@ eliminarAteSobrarQuatro(
   roda,
   Number(idade)
 );
+const resultado = obterResultadoFinal(roda);
 
+console.log(resultado);
 
+contarHistoria(resultado);
 
 });

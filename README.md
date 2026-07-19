@@ -221,7 +221,19 @@ Melhorar a experiência do usuário.
 - Validações
 - Refatoração
 - Sistema de mensagens "erros"
+- Narrativa Protótipo
+- visão do Produto
 
-### Sprint 07  Em desenvolvimento
+## Sprint 07  Reavaliar a experiência do usuário (UX) antes de iniciar a implemtação das animações.
+###  Decisões tomadas
 
-- Melhorias visuais
+- Redefinição da Experiência do Usuário (UX), 
+- Manter a arquitetura atual da Engine (sem alterações).
+- Definido que o algoritmo continuará processando todo o resultado nos bastidores.
+- A experiência visual será separada da lógica do jogo.
+- O usuário acompanhará visualmente o processo de eliminação dos elementos.
+- A narrativa será utilizada apenas na tela final, e não durante todo o processo.
+
+## Sprint 08 UX - Estrutura de palco HTML
+
+- Criação da estrutura section principais.
