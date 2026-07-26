@@ -43,34 +43,7 @@ Destiny-Life/
 ├── index.html
 └── README.md
 
----
-
-##  Funcionalidades atuais
-
-- Cadastro de idade
-- Cadastro de pretendentes
-- Cadastro de cidades
-- Sorteio do destino
-- Exibição dinâmica dos resultados
-- Sistema de validação
-- Mensagens de erro na própria interface
-- Código refatorado para reutilização de funções
-
----
-
-##  Conceitos praticados
-
-- Variáveis
-- Condições (`if`)
-- Laços (`for`)
-- Arrays
-- Objetos
-- Funções
-- Manipulação do DOM
-- Eventos
-- Validação de formulários
-- Refatoração
-- UX (Experiência do Usuário)
+---  
 
 
 ## Funcionalidades atuais
@@ -194,6 +167,7 @@ Refatorar o sistema de validação.
 - Reutilização de código.
 - Refatoração.
 - Single Responsibility.
+
 ## Sprint 06
 
 ### Objetivo
@@ -236,4 +210,24 @@ Melhorar a experiência do usuário.
 
 ## Sprint 08 UX - Estrutura de palco HTML
 
-- Criação da estrutura section principais.
+- Criação da estrutura section principais
+- Criação da função mostrar tela para escalabilidade
+- Fluxo  de transição entre telas funcional
+
+## Sprint 09 UX - Direção de cena "transição de telas"
+
+### Concluído
+- Configuração do CSS para controlar o estado inicial das telas
+- Crianção do palco para tela de animação 'universo destino'
+- Implantação do setTimeout como temporizador apresentação das telas
+  
+### Testes finalizados
+
+   ✅ Transição das telas
+   ✅ setTimeout() funcionando
+   ✅ Resultado final correto
+   ✅ universoDestino encontrado pelo DOM
+   ✅ Elementos criados dinamicamente
+   ✅ Classes atribuídas corretamente
+   ✅ Estado inicial das telas corrigido
+   ✅ Fluxo completo funcionando

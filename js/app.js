@@ -1,6 +1,19 @@
-
 const mensagemErro = document.getElementById("mensagemErro");
 const narrativa = document.getElementById("narrativa");
+
+//Escalabilidade das telas
+function mostrarTelas(nomeTela) {
+
+  const telas = document.querySelectorAll("section");
+
+  for (const tela of telas){
+    tela.style.display ="none";
+  }
+
+  document.getElementById(nomeTela).style.display = "block";
+
+}
+
  //validações de imputs
  function validarIdade(idade) {
 
@@ -184,10 +197,50 @@ eliminarAteSobrarQuatro(
   roda,
   Number(idade)
 );
+
+
 const resultado = obterResultadoFinal(roda);
 
 console.log(resultado);
 
-contarHistoria(resultado);
+mostrarTelas("telaConsultando");
+//função de teste tela animação!
+//function prepararPalco() {
+
+  //const palco = document.getElementById("universoDestino");
+  //console.log("PALCO:", palco);
+
+  //palco.textContent =( "🌌 O destino está se formando...");
+
+//}
+//função para tela animação receber dados da engine e criar elementos visuais no DOM.
+// analogia 'palco de exibição como um espetaculo'
+function construirUniverso(resultado) {
+
+  const palco = document.getElementById("universoDestino");
+
+  for (const item of resultado) {
+
+    const div = document.createElement("div");
+
+    div.classList.add(item.tipo);  
+
+    div.textContent = item.valor;
+
+
+    palco.appendChild(div);
+  }
+
+}
+setTimeout(() => {
+  mostrarTelas("telaAnimacao");
+  construirUniverso(resultado);
+},2000);
+
+setTimeout(() => {
+  mostrarTelas("telaResultado");
+},4000);
+
+
 
 });

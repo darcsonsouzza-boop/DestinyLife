@@ -12,7 +12,14 @@ body {
 
 
 }
+/* escoder as divs esceto formulário*/
+section {
+  display: none;
+}
 
+#telaFormulario {
+  display: block;
+}
 
 
 
@@ -36,7 +43,22 @@ button {
   padding: 12px;
   cursor: pointer;
 }
+/* estilização pretendentes, cidade filhos e estatus */
+.pretendente {
+  font-size: 24px;
+}
 
+.cidade {
+  font-size: 22px;
+}
+
+.filhos {
+  font-size: 20px;
+}
+
+.status {
+  font-size: 20px;
+}
 #resultadoPretendente,
 #resultadoCidade,
 #resultadoFilhos,
