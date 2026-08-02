@@ -1,5 +1,6 @@
 const mensagemErro = document.getElementById("mensagemErro");
-const narrativa = document.getElementById("narrativa");
+const narrativa = document.getElementById("narra tiva");
+const textoNarrativa =document.getElementById("textoNarrativa");
 
 //Escalabilidade das telas
 function mostrarTelas(nomeTela) {
@@ -204,13 +205,14 @@ const resultado = obterResultadoFinal(roda);
 console.log(resultado);
 
 mostrarTelas("telaConsultando");
-//função de teste tela animação!
+
+//função de teste tela animação !
 //function prepararPalco() {
 
   //const palco = document.getElementById("universoDestino");
   //console.log("PALCO:", palco);
 
-  //palco.textContent =( "🌌 O destino está se formando...");
+  //palco.textContent =( " O destino está se formando...");
 
 //}
 //função para tela animação receber dados da engine e criar elementos visuais no DOM.
@@ -218,6 +220,8 @@ mostrarTelas("telaConsultando");
 function construirUniverso(resultado) {
 
   const palco = document.getElementById("universoDestino");
+
+ 
 
   for (const item of resultado) {
 
@@ -232,14 +236,24 @@ function construirUniverso(resultado) {
   }
 
 }
+//efeitos de narrativas e transiçoes de telas
+setTimeout(() => {
+
+  textoNarrativa.classList.add("mostrar");
+
+}, 300);
+
+
 setTimeout(() => {
   mostrarTelas("telaAnimacao");
   construirUniverso(resultado);
-},2000);
+
+
+},3000);
 
 setTimeout(() => {
-  mostrarTelas("telaResultado");
-},4000);
+ mostrarTelas("telaResultado");
+},6000);
 
 
 

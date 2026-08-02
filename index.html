@@ -8,12 +8,19 @@
   </head>
 
   <body>
+
     <section id="telaFormulario">
+
+      <div  class="containerFormulario">
+
       <h1>DESTINY LIFE</h1>
+
       <p>Descubra seu Destino</p>
+
       <h2>Idade para casar</h2>
 
       <input type="number" id="idade" min="1" placeholder="18 á 80 anos" />
+
       <h2>Pretendentes</h2>
 
       <input type="text" id="pretendente1" />
@@ -33,7 +40,7 @@
 
       <button id="btnDestino">Descobrir Destino</button>
 
-      <h2>O Destino escolheu que !</h2>
+      <h2>O Destino escolheu que</h2>
       <p id="mensagemErro"></p>
       <p id="narrativa"></p>
 
@@ -58,8 +65,13 @@
       </p>
     </section>
 
+  </div>
+
     <section id="telaConsultando">
-      <h2>consultado</h2>
+      
+      <p id="textoNarrativa" class="narrativa">
+        Preparando destino...
+      </p>
     </section>
 
     <section id="telaAnimacao">
@@ -72,6 +84,8 @@
 
         <div class="status">Muito feliz</div>
       </div>
+      <!--Toda a dinâmica do destino é influiciada pela idade  -->
+      <div id="idadeDestino"></div>
     </section>
 
     <section id="telaResultado">

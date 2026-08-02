@@ -5,6 +5,12 @@
 }
 body {
   font-family: Arial, sans-serif;
+  margin: 0;
+  background: linear-gradient(to right, #ff7e5f, #feb47b);
+}
+
+.containerFormulario {
+  font-family: Arial, sans-serif;
   max-width: 600px;
   margin: 0 auto;
   padding: 20px;
@@ -64,4 +70,25 @@ button {
 #resultadoFilhos,
 #resultadoStatus {
   text-align: left;
+}
+#telaConsultando {
+
+  background-image: url("../assets/preparando-destino.jpg");
+
+  background-size: cover;
+
+  background-position: center;
+
+  background-repeat: no-repeat;
+
+  min-height: 100vh;
+}
+/*tesxto sugir tela consulatdo*/
+.narrativa{ opacity: 0;     
+  transition: opacity 2s ease;    
+
+}
+.mostrar{
+  opacity: 1;
+  transition: opacity 2s ease;
 }
